@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqkw1bwc4ym0a"]
+
+[ext_resource type="PackedScene" uid="uid://b6haqqb0xl4us" path="res://Scenes/Player.tscn" id="1_pldgw"]
+[ext_resource type="Texture2D" uid="uid://cmu2tlxmavf4t" path="res://icon.svg" id="2_80eni"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jard6"]
+size = Vector3(2.74121, 4.08569, 1)
+
+[node name="Scene1" type="Node3D"]
+
+[node name="Scene2" parent="." instance=ExtResource("1_pldgw")]
+transform = Transform3D(0.999997, 0.0020073, -0.00112936, -0.00200446, 0.999995, 0.0025068, 0.00113438, -0.00250453, 0.999996, 0, 0.61217, 0)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(3.75297, -0.013807, -0.00249744, 0.00941251, 0.014611, 0.999991, -0.0118234, -4.37095, 0.0033506, -0.556499, -3.77667, -0.219132)
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D"]
+transform = Transform3D(1, -2.32831e-10, -7.95808e-12, 0, 1, 0, 1.08776e-09, 9.31323e-10, 1, 0.0979327, -0.0514933, 0.414771)
+texture = ExtResource("2_80eni")
+
+[node name="Area3D" type="Area3D" parent="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
+transform = Transform3D(1, -9.31323e-10, -2.18279e-10, 0, 1, 0, 1.25885e-07, 2.79397e-09, 0.999992, -0.270996, 0.232788, 1.90735e-06)
+shape = SubResource("BoxShape3D_jard6")
